@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+public class pythagorean {
+
+    static Scanner keyboard = new Scanner(System.in);
+
+    public static int getA() {
+        int sideA;
+        System.out.println("Enter side A: ");
+        sideA = keyboard.nextInt();
+        return(sideA);
+    }
+
+    public static int getB() {
+        int sideB;
+        System.out.println("Enter side B: ");
+        sideB = keyboard.nextInt();
+        return (sideB);
+    }
+
+    public static int getC() {
+        int sideC;
+        System.out.println("Enter side C: ");
+        sideC = keyboard.nextInt();
+        return (sideC);
+    }
+
+    public static int calculateA2(int a) {
+        int aSquare;
+        aSquare = (int) Math.pow(a, 2);
+        return(aSquare);
+    }
+
+    public static int calculateB2(int b) {
+        int bSquare;
+        bSquare = (int) Math.pow(b, 2);
+        return (bSquare);
+    }
+
+    public static int calculateC2(int c) {
+        int cSquare;
+        cSquare = (int) Math.pow(c, 2);
+        return (cSquare);
+    }
+
+    public static void displaySquares(int aSquare, int bSquare, int cSquare) {
+        if (cSquare != (aSquare+bSquare))
+            System.out.println("It's not a right triangle!");
+        else
+            System.out.println("It is a right triangle!");
+    }
+    public static void main(String[] args) {
+
+
+        int a=0;
+        int b=0;
+        int c=0;
+
+        int aSquare=0;
+        int bSquare=0;
+        int cSquare=0;
+
+        System.out.println("Enter three measures of triangle's sides:");
+        a = getA();
+        b = getB();
+        c = getC();
+        System.out.println("Sides of the triangle are: "+a+", "+b+" and "+c+"");
+
+        aSquare = calculateA2(a);
+        bSquare = calculateB2(b);
+        cSquare = calculateC2(c);
+
+        System.out.println("A squared is: "+aSquare+"");
+        System.out.println("B squared is: "+bSquare+"");
+        System.out.println("C squared is: "+cSquare+"");
+
+        displaySquares(aSquare, bSquare, cSquare);
+
+    }
+}
